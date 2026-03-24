@@ -9,7 +9,7 @@
             padding: 12px;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #b90fd0;
             color: white;
         }
         tr:nth-child(even) {
@@ -18,3 +18,6 @@
         tr:hover {
             background-color: #ddd;
         }
+        .classs  {
+           background-color: rgb(13, 195, 122);
+          }
