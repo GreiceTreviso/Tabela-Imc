@@ -40,7 +40,36 @@ calculostatus (veredito, filhos[5])
 }
 // aqui o textContent ta sendo usado para alterar a escrita da tag html
 
+//iterador 
+atributos.forEach(tr => {
+let filhos=tr.children
+let status = filhos[5]
 
+if (status.textContent == 'Abaixo do peso'){
+ status.style.backgroundColor = '#eec6c6'
+ }
+
+ else if (status.textContent == "Normal") {
+  status.style.backgroundColor = 'white'
+ }                                   
+
+ else if (status.textContent == "Sobrepeso") {
+ status.style.backgroundColor = '#edf4d8'
+ }
+
+ else if (status.textContent == "Obesidade Grau I") {
+  status.style.backgroundColor = '#cb9c9c'
+ }
+
+ else if (status.textContent == "Obesidade Grau II") {
+  status.style.backgroundColor = '#6f3939'
+ }
+
+ else{ 
+  status.style.backgroundColor = '#350a0a'
+} 
+
+})
 
 
 
