@@ -27,6 +27,6 @@ export function calculostatus (imc, tagPessoa) {
  }
 
  else{ (imc>= 40)
-    tagPessoa.textContent = "obesidade Grau III morbida"
+    tagPessoa.textContent = "Obesidade Grau III morbida"
 } 
 }

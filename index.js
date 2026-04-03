@@ -3,9 +3,9 @@ import { Calculoimc, calculostatus} from "./function.js"
 let atributos = document.querySelectorAll('tbody tr') //a diferença do document.querySelector e o  document.querySelectorAll é que o All pode mirar em varias tag de uma vez só.
 
 //criar o laço de repetição para q ele apresente todas a tr e td
-for (let index = 0; index <=19 ; index++) {
+for (let index = 0; index <atributos.length ; index++) {
 // let cria a variavel pra repetir, =0 pra começar dele
-// <=19; o quanto vai repetir.repete varias vezes so n passa de 19
+// <atributos.lenght; o quanto vai repetir de forma automatica
 // ++ quanto muda a cada repetição. ou sej mais um
 // 0, 1 ,2... contagem vetor começa do zero
 
@@ -41,6 +41,7 @@ calculostatus (veredito, filhos[5])
 // aqui o textContent ta sendo usado para alterar a escrita da tag html
 
 //iterador 
+//forEach para percorrer todos (loop)
 atributos.forEach(tr => {
 let filhos=tr.children
 let status = filhos[5]
@@ -70,6 +71,29 @@ if (status.textContent == 'Abaixo do peso'){
 } 
 
 })
+
+//filtro
+let input =document.querySelector('.entrada') //criando variavel input pegando caixinha la do html
+input.addEventListener('input', ()=> { //pra rodar sempre que digita
+   
+      atributos.forEach(tr => { //percorrer todas linha sda tabela
+     tr.visible = true //linha pode aparecer
+     let tds = tr.children //pegando as td
+
+     if(!tds[5].textContent.includes(input.value)){ //tds5 pq é a sexta coluna,mas começa a contar do 0. pegando texto e vendo se contem
+        tr.visible = false //se nn tiver o texto linha some
+     }
+
+     if(tr.visible){ 
+        tr.style.display = 'table-row' //se tiver texto mostra a linha
+     } else{
+        tr.style.display = 'none'//esconde as outras 
+     }
+
+
+     })
+     console.log ('----') //separa rodadas console, toda vez q digita
+     })
 
 
 
