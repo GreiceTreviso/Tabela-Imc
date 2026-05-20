@@ -26,7 +26,7 @@ export function calculostatus (imc, tagPessoa) {
     tagPessoa.textContent = "Obesidade Grau II"
  }
 
- else{ (imc>= 40)
+ else{ 
     tagPessoa.textContent = "Obesidade Grau III morbida"
 } 
 }
